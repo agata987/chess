@@ -1,6 +1,6 @@
 #include "figura.h"
 #include <QDebug>
-
+//test
 Figura::Figura(QWidget *parent, int x, int y, int player) : Pole(parent, x, y)
 {
     this->player = player;
