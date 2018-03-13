@@ -1,6 +1,6 @@
 #include "pionek.h"
 
-Pionek::Pionek(QWidget *parent, int x, int y, int player) : Figura(parent, x, y, player)
+Pionek::Pionek(QWidget *parent, int x, int y, int player, int id) : Figura(parent, x, y, player, id)
 {
     this->nazwa = "Goniec";
 

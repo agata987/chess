@@ -6,7 +6,7 @@
 class Hetman : public Figura
 {
 public:
-    Hetman(QWidget *parent, int x, int y, int player);
+    Hetman(QWidget *parent, int x, int y, int player, int id);
 };
 
 #endif // HETMAN_H

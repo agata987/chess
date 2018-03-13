@@ -6,7 +6,7 @@
 class Goniec : public Figura
 {
 public:
-    Goniec(QWidget *parent, int x, int y, int player);
+    Goniec(QWidget *parent, int x, int y, int player, int id);
 };
 
 #endif // GONIEC_H

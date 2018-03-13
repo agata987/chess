@@ -6,7 +6,7 @@
 class Krol : public Figura
 {
 public:
-    Krol(QWidget *parent, int x, int y, int player);
+    Krol(QWidget *parent, int x, int y, int player, int id);
 };
 
 #endif // KROL_H

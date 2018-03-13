@@ -6,7 +6,7 @@
 class Kon : public Figura
 {
 public:
-    Kon(QWidget *parent, int x, int y, int player);
+    Kon(QWidget *parent, int x, int y, int player, int id);
 };
 
 #endif // KON_H

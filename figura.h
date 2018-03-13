@@ -9,11 +9,11 @@ class Figura : public Pole
 {
 protected:
     QString nazwa;
-    int player;
+    int player, id;
     QPoint offset;
 
 public:
-    Figura(QWidget *parent, int x, int y, int player);
+    Figura(QWidget *parent, int x, int y, int player, int id);
 
     void mousePressEvent(QMouseEvent *ev);
     void mouseMoveEvent(QMouseEvent *ev);

@@ -6,7 +6,7 @@
 class Pionek : public Figura
 {
 public:
-    Pionek(QWidget *parent, int x, int y, int player);
+    Pionek(QWidget *parent, int x, int y, int player, int id);
 };
 
 #endif // PIONEK_H

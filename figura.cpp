@@ -1,9 +1,10 @@
 #include "figura.h"
 #include <QDebug>
 //test
-Figura::Figura(QWidget *parent, int x, int y, int player) : Pole(parent, x, y)
+Figura::Figura(QWidget *parent, int x, int y, int player, int id) : Pole(parent, x, y)
 {
     this->player = player;
+    this->id = id;
 }
 
 void Figura::mousePressEvent(QMouseEvent *ev)
