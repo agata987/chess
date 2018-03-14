@@ -7,12 +7,11 @@
 
 class Figura : public Pole
 {
-    static QVector<Figura *> wskFigury;
-
 protected:
     QString nazwa;
     int player, id;
     QPoint offset;
+    static QVector<Figura *> wskFigury;
 
 public:
     Figura(QWidget *parent, int x, int y, int player, int id);

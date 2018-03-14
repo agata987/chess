@@ -1,5 +1,15 @@
 #include "pole.h"
 
+int Pole::getX() const
+{
+    return x;
+}
+
+int Pole::getY() const
+{
+    return y;
+}
+
 Pole::Pole(QWidget *parent, int x, int y) : QLabel(parent)
 {
     this->x = x;

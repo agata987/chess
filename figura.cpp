@@ -15,13 +15,15 @@ QVector<Figura *> Figura::wskFigury;
 void Figura::mousePressEvent(QMouseEvent *ev)
 {
     offset = ev->pos();
+
     //qDebug() << "OFFSET : " << offset.x() << ", " << offset.y();
-    qDebug() << "POCZATEK x = " << this->x << ", y = " << this->y;
+    //qDebug() << "POCZATEK x = " << this->x << ", y = " << this->y;
 }
 
 void Figura::mouseMoveEvent(QMouseEvent *ev)
 {
     this->move(mapToParent(ev->pos()) - offset);
+
     //qDebug() << "POZYCJA : " << mapToParent(ev->pos()) - offset;
 }
 
@@ -44,5 +46,5 @@ void Figura::mouseReleaseEvent(QMouseEvent *ev)
     } else {
         this->move(this->x*80 + 40, this->y*80 + 40);
     }
-    qDebug() << "x = " << this->x << ", y = " << this->y;
+    //qDebug() << "x = " << this->x << ", y = " << this->y;
 }

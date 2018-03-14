@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     QWidget *w = new QWidget;
 
     Szachownica *s1 = new Szachownica(w);
-    s1->rysujFigury(w);
+    s1->rozpocznijGre(w);
 
 
     w->show();

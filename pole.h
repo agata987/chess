@@ -12,8 +12,8 @@ protected:
 public:
     Pole(QWidget *parent, int x, int y);
     void setGrafikaPola(QPixmap);
-
-
+    int getX() const;
+    int getY() const;
 };
 
 #endif // POLE_H

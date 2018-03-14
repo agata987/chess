@@ -10,6 +10,8 @@ Goniec::Goniec(QWidget *parent, int x, int y, int player, int id) : Figura(paren
 
 bool Goniec::sprawdzRuch(int x, int y)
 {
-    if(x-this->x == y-this->y || x-this->x == (y-this->y)*(-1)) return true;
+    if(x-this->x == y-this->y || x-this->x == (y-this->y)*(-1)) {
+        return true;
+    }
     else return false;
 }

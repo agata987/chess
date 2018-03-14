@@ -15,12 +15,11 @@ class Szachownica
 {
 private:
     Pole *poleSzach[8][8];
-    //Pole *poleFig[8][8];
     QVector<Pole*> figury;
 
 public:
     Szachownica(QWidget *parent);
-    void rysujFigury(QWidget *parent);
+    void rozpocznijGre(QWidget *parent);
 };
 
 #endif // SZACHOWNICA_H
