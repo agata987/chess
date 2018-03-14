@@ -5,12 +5,18 @@ Figura::Figura(QWidget *parent, int x, int y, int player, int id) : Pole(parent,
 {
     this->player = player;
     this->id = id;
+
+    wskFigury.append(this);
+    //qDebug() << "TEST " << wskFigury.size();
 }
+
+QVector<Figura *> Figura::wskFigury;
 
 void Figura::mousePressEvent(QMouseEvent *ev)
 {
     offset = ev->pos();
     //qDebug() << "OFFSET : " << offset.x() << ", " << offset.y();
+    qDebug() << "POCZATEK x = " << this->x << ", y = " << this->y;
 }
 
 void Figura::mouseMoveEvent(QMouseEvent *ev)
@@ -21,8 +27,8 @@ void Figura::mouseMoveEvent(QMouseEvent *ev)
 
 void Figura::mouseReleaseEvent(QMouseEvent *ev)
 {
-    int y = (mapToParent(ev->pos()).x() - offset.x())/80;
-    int x = (mapToParent(ev->pos()).y() - offset.y())/80;
+    int x = (mapToParent(ev->pos()).x() - offset.x())/80;
+    int y = (mapToParent(ev->pos()).y() - offset.y())/80;
     //qDebug() << "x = " << x << ", y = " << y;
 
     if(x>=0 && x<=7 && y>=0 && y<=7) {
@@ -30,13 +36,13 @@ void Figura::mouseReleaseEvent(QMouseEvent *ev)
         if(this->sprawdzRuch(x, y)) {
             this->x = x;
             this->y = y;
-            this->move(y*80 + 40, x*80 + 40);
+            this->move(x*80 + 40, y*80 + 40);
         } else {
-            this->move(this->y*80 + 40, this->x*80 + 40);
+            this->move(this->x*80 + 40, this->y*80 + 40);
         }
 
     } else {
-        this->move(this->y*80 + 40, this->x*80 + 40);
-        //qDebug() << "x = " << this->x << ", y = " << this->y;
+        this->move(this->x*80 + 40, this->y*80 + 40);
     }
+    qDebug() << "x = " << this->x << ", y = " << this->y;
 }

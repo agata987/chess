@@ -11,10 +11,10 @@ Pionek::Pionek(QWidget *parent, int x, int y, int player, int id) : Figura(paren
 bool Pionek::sprawdzRuch(int x, int y)
 {
     if(player == 1) {
-        if(x-this->x == -1 && y == this->y) return true;
+        if(y-this->y == -1 && x == this->x) return true;
         else return false;
     } else {
-        if(x-this->x == 1 && y == this->y) return true;
+        if(y-this->y == 1 && x == this->x) return true;
         else return false;
     }
 }

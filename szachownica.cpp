@@ -34,24 +34,24 @@ void Szachownica::rysujFigury(QWidget *parent) {
     }*/
 
     //BIALE
-    figury.append(new Wieza(parent, 7, 0, 1, 0));
+    figury.append(new Wieza(parent, 0, 7, 1, 0));
     figury.append(new Wieza(parent, 7, 7, 1, 1));
-    figury.append(new Kon(parent, 7, 1, 1, 2));
-    figury.append(new Kon(parent, 7, 6, 1, 3));
-    figury.append(new Goniec(parent, 7, 2, 1, 4));
-    figury.append(new Goniec(parent, 7, 5, 1, 5));
-    figury.append(new Hetman(parent, 7, 3, 1, 6));
-    figury.append(new Krol(parent, 7, 4, 1, 7));
-    for(int i=0; i<8; i++) figury.append(new Pionek(parent, 6, i, 1, 8+i));
+    figury.append(new Kon(parent, 1, 7, 1, 2));
+    figury.append(new Kon(parent, 6, 7, 1, 3));
+    figury.append(new Goniec(parent, 2, 7, 1, 4));
+    figury.append(new Goniec(parent, 5, 7, 1, 5));
+    figury.append(new Hetman(parent, 3, 7, 1, 6));
+    figury.append(new Krol(parent, 4, 7, 1, 7));
+    for(int i=0; i<8; i++) figury.append(new Pionek(parent, i, 6, 1, 8+i));
 
     //CZARNE
-    figury.append(new Wieza(parent, 0, 0, 2, 0));
-    figury.append(new Wieza(parent, 0, 7, 2, 1));
-    figury.append(new Kon(parent, 0, 1, 2, 2));
-    figury.append(new Kon(parent, 0, 6, 2, 3));
-    figury.append(new Goniec(parent, 0, 2, 2, 4));
-    figury.append(new Goniec(parent, 0, 5, 2, 5));
-    figury.append(new Hetman(parent, 0, 3, 2, 6));
-    figury.append(new Krol(parent, 0, 4, 2, 7));
-    for(int i=0; i<8; i++) figury.append(new Pionek(parent, 1, i, 2, 8+i));
+    figury.append(new Wieza(parent, 0, 0, 2, 16));
+    figury.append(new Wieza(parent, 7, 0, 2, 17));
+    figury.append(new Kon(parent, 1, 0, 2, 18));
+    figury.append(new Kon(parent, 6, 0, 2, 19));
+    figury.append(new Goniec(parent, 2, 0, 2, 20));
+    figury.append(new Goniec(parent, 5, 0, 2, 21));
+    figury.append(new Hetman(parent, 3, 0, 2, 22));
+    figury.append(new Krol(parent, 4, 0, 2, 23));
+    for(int i=0; i<8; i++) figury.append(new Pionek(parent, i, 1, 2, 24+i));
 }

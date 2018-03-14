@@ -7,6 +7,8 @@
 
 class Figura : public Pole
 {
+    static QVector<Figura *> wskFigury;
+
 protected:
     QString nazwa;
     int player, id;
