@@ -26,11 +26,17 @@ void Figura::mouseReleaseEvent(QMouseEvent *ev)
     //qDebug() << "x = " << x << ", y = " << y;
 
     if(x>=0 && x<=7 && y>=0 && y<=7) {
-        this->x = x;
-        this->y = y;
-        this->move(y*80 + 40, x*80 + 40);
+
+        if(this->sprawdzRuch(x, y)) {
+            this->x = x;
+            this->y = y;
+            this->move(y*80 + 40, x*80 + 40);
+        } else {
+            this->move(this->y*80 + 40, this->x*80 + 40);
+        }
+
     } else {
         this->move(this->y*80 + 40, this->x*80 + 40);
-        qDebug() << "x = " << this->x << ", y = " << this->y;
+        //qDebug() << "x = " << this->x << ", y = " << this->y;
     }
 }

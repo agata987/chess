@@ -7,6 +7,7 @@ class Goniec : public Figura
 {
 public:
     Goniec(QWidget *parent, int x, int y, int player, int id);
+    bool sprawdzRuch(int x, int y);
 };
 
 #endif // GONIEC_H

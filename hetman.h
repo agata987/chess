@@ -7,6 +7,7 @@ class Hetman : public Figura
 {
 public:
     Hetman(QWidget *parent, int x, int y, int player, int id);
+    bool sprawdzRuch(int x, int y);
 };
 
 #endif // HETMAN_H

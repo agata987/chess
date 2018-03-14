@@ -8,3 +8,10 @@ Hetman::Hetman(QWidget *parent, int x, int y, int player, int id) : Figura(paren
     else this->setPixmap(QPixmap(":/czarne/PNG/hetman_c.png"));
 }
 
+bool Hetman::sprawdzRuch(int x, int y)
+{
+    if(x-this->x == y-this->y || x-this->x == (y-this->y)*(-1) ||
+       x == this->x || y == this->y) return true;
+    else return false;
+}
+

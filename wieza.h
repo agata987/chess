@@ -7,6 +7,7 @@ class Wieza : public Figura
 {
 public:
     Wieza(QWidget *parent, int x, int y, int player, int id);
+    bool sprawdzRuch(int x, int y);
 };
 
 #endif // WIEZA_H

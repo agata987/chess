@@ -14,6 +14,7 @@ protected:
 
 public:
     Figura(QWidget *parent, int x, int y, int player, int id);
+    virtual bool sprawdzRuch(int x, int y) = 0;
 
     void mousePressEvent(QMouseEvent *ev);
     void mouseMoveEvent(QMouseEvent *ev);
