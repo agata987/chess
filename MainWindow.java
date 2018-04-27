@@ -3,16 +3,16 @@ package szachy_java;
 import com.trolltech.qt.gui.*;
 import com.trolltech.qt.core.*;
 
-package Ui;   // jak zrobiæ namespace Ui? , interface/package/namespace?
+package Ui;   // jak zrobiÃ¦ namespace Ui? , interface/package/namespace?
 
 public class MainWindow extends QMainWindow {
-	Q_OBJECT   //jak zrobiæ macro?
+	Q_OBJECT   //nie ma macro w javie
 public
 explicit MainWindow(QWidget parent = 0){
 		super(parent);          // ??
 		super(Ui::MainWindow);
 		
-		this.setWindowTitle("Chess by Tomasz Kula & Agata Szczypiñska");
+		this.setWindowTitle("Chess by Tomasz Kula & Agata SzczypiÃ±ska");
 	    this.setFixedSize(900, 640);
 
 	    b_nowaGra = new QPushButton(this);
@@ -20,7 +20,7 @@ explicit MainWindow(QWidget parent = 0){
 	    b_nowaGra.setGeometry(700, 100, 140, 30);
 
 	    b_poddajSie = new QPushButton(this);
-	    b_poddajSie.setText("Poddaj Siê");
+	    b_poddajSie.setText("Poddaj SiÃª");
 	    b_poddajSie.setGeometry(700, 180, 140, 30);
 
 	    connect(b_nowaGra, SIGNAL (released()), this, SLOT (nowaGra()));
