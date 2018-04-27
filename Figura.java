@@ -4,7 +4,7 @@ import com.trolltech.qt.gui.*;
 import com.trolltech.qt.core.*;
 import java.util.Vector;    // brak klasy qvector
 import com.trolltech.qt.gui.QMouseEvent;
-// szukam qvector
+
 import com.trolltech.*;
 import com.trolltech.qt.qtjambi.*;
 
@@ -40,7 +40,7 @@ public class Figura extends Pole{
 		    t_aktualnyRuch.setGeometry(690, 20, 120, 30);
 		}
 		 if(im_aktualnyRuch == null) {
-		        im_aktualnyRuch = new QLabel(parent);    // trzeba poprawiæ grafiki
+		        im_aktualnyRuch = new QLabel(parent);    // trzeba poprawiÃ¦ grafiki
 		        im_aktualnyRuch.setPixmap(QPixmap(":/gracze/PNG/player1.png"));
 		        im_aktualnyRuch.setStyleSheet("border: 1px solid black;");
 		        im_aktualnyRuch.setGeometry(820, 20, 30, 30);
@@ -122,7 +122,7 @@ public class Figura extends Pole{
                                         this.x = staryX;
                                         this.y = staryY;
                                         this.move(this.x*80, this.y*80);
-                                        qDebug() << "Nie mozesz tu isc bo bêdzie szach ;(";
+                                        qDebug() << "Nie mozesz tu isc bo bÃªdzie szach ;(";
                                     } else {
                                         qDebug() << "Ok, tu mozesz";
                                         int testX = wszystkieFigury[i].getX();
@@ -209,11 +209,11 @@ public class Figura extends Pole{
                                                 this.move(x*80, y*80);
 
                                                 if(aktualnyRuch == 1) {
-                                                    wsklogi << "Bia³e robi¹ roszadê\n";
+                                                    wsklogi << "BiaÂ³e robiÂ¹ roszadÃª\n";
                                                     aktualnyRuch = 2;
                                                     im_aktualnyRuch.setPixmap(QPixmap(":/gracze/PNG/player2.png"));
                                                 } else {
-                                                    wsklogi << "Czarne robi¹ roszadê\n";
+                                                    wsklogi << "Czarne robiÂ¹ roszadÃª\n";
                                                     aktualnyRuch = 1;
                                                     im_aktualnyRuch.setPixmap(QPixmap(":/gracze/PNG/player1.png"));
                                                 }
@@ -257,11 +257,11 @@ public class Figura extends Pole{
                                                 this.move(x*80, y*80);
 
                                                 if(aktualnyRuch == 1) {
-                                                    wsklogi << "Bia³e robi¹ roszadê\n";
+                                                    wsklogi << "BiaÂ³e robiÂ¹ roszadÃª\n";
                                                     aktualnyRuch = 2;
                                                     im_aktualnyRuch.setPixmap(QPixmap(":/gracze/PNG/player2.png"));
                                                 } else {
-                                                    wsklogi << "Czarne robi¹ roszadê\n";
+                                                    wsklogi << "Czarne robiÂ¹ roszadÃª\n";
                                                     aktualnyRuch = 1;
                                                     im_aktualnyRuch.setPixmap(QPixmap(":/gracze/PNG/player1.png"));
                                                 }
@@ -289,7 +289,7 @@ public class Figura extends Pole{
                                 this.x = staryX;
                                 this.y = staryY;
                                 this.move(this.x*80, this.y*80);
-                                qDebug() << "Nie mozesz tu isc bo bêdzie szach ;(";
+                                qDebug() << "Nie mozesz tu isc bo bÃªdzie szach ;(";
                             } else {
                                 qDebug() << "Ok, tu mozesz";
 
@@ -415,8 +415,8 @@ public class Figura extends Pole{
                 }
             }
             wsklogi << "... I MAT\n";
-            if(aktualnyRuch == 2) wsklogi << "KONIEC GRY!!! WYGRYWAJ¥ BIA£E\nGRATULACJE\n";
-            else wsklogi << "KONIEC GRY!!! WYGRYWAJ¥ CZARNE\nGRATULACJE\n";
+            if(aktualnyRuch == 2) wsklogi << "KONIEC GRY!!! WYGRYWAJÂ¥ BIAÂ£E\nGRATULACJE\n";
+            else wsklogi << "KONIEC GRY!!! WYGRYWAJÂ¥ CZARNE\nGRATULACJE\n";
 
             return true;
         } else return false;
@@ -432,9 +432,9 @@ public class Figura extends Pole{
 	                         "font-weight: 600; border: 3px solid black;");
 
 	    if(aktualnyRuch == 2) {
-	        wynik.setHtml("<p style=\"text-align: center\">KONIEC GRY!!!<br>WYGRYWAJ¥ BIA£E");
+	        wynik.setHtml("<p style=\"text-align: center\">KONIEC GRY!!!<br>WYGRYWAJÂ¥ BIAÂ£E");
 	    } else {
-	        wynik.setHtml("<p style=\"text-align: center\">KONIEC GRY!!!<br>WYGRYWAJ¥ CZARNE");
+	        wynik.setHtml("<p style=\"text-align: center\">KONIEC GRY!!!<br>WYGRYWAJÂ¥ CZARNE");
 	    }
 
 	    wynik.show();
