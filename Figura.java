@@ -442,6 +442,6 @@ public class Figura extends Pole{
     
     } ; 
 
-   
-Logi operator <<(Logi l,Figura f);     // co to?
+   // w javie nie ma przeciążania operatorów
+Logi operator <<(Logi l,Figura f);     
 Logi operator <<(Logi l, String s);
