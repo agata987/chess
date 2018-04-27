@@ -2,7 +2,7 @@ package szachy_java;
 
 import com.trolltech.qt.gui.*;
 import com.trolltech.qt.core.*;
-// ma byc Goniecc, bo klasa Goniec sie popsula i eclipse nie chce jej zrobic
+
 public class Goniecc extends Figura {
 	public
 	Goniecc(QWidget parent, int x, int y, int player){
